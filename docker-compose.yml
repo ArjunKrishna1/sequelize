@@ -1,0 +1,16 @@
+version: '3'
+services: 
+
+         dbaql :
+                image: postgres
+                environment: 
+                            POSTGRES_USER: postgres
+                            POSTGRES_PASSWORD: postgres
+                            POSTGRES_DB : testdb
+
+                ports: 
+                      - 5432:5432
+
+                volumes: 
+                        - /home/friday/datasrc:/var/lib/postgresql/data      
+
